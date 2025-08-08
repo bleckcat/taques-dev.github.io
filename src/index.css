@@ -1,68 +1,80 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Tech Portfolio Design System - Dark theme with modern tech aesthetics */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    /* Base colors - Dark tech theme */
+    --background: 222 47% 8%;
+    --foreground: 213 31% 91%;
+
+    /* Card system */
+    --card: 222 47% 11%;
+    --card-foreground: 213 31% 91%;
+    --card-hover: 222 47% 13%;
+
+    /* Interactive elements */
+    --popover: 222 47% 11%;
+    --popover-foreground: 213 31% 91%;
+
+    /* Primary tech blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 8%;
+    --primary-glow: 217 91% 70%;
+
+    /* Secondary purple accent */
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 213 31% 91%;
+    --secondary-glow: 262 83% 68%;
+
+    /* Muted elements */
+    --muted: 222 47% 15%;
+    --muted-foreground: 213 27% 64%;
+
+    /* Accent teal */
+    --accent: 174 74% 56%;
+    --accent-foreground: 222 47% 8%;
+    --accent-glow: 174 74% 66%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 213 31% 91%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 213 31% 91%;
+
+    /* Borders and inputs */
+    --border: 222 47% 20%;
+    --input: 222 47% 15%;
+    --ring: 217 91% 60%;
+
+    /* Layout */
+    --radius: 0.75rem;
+
+    /* Tech gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(222 47% 12%));
+    
+    /* Glow effects */
+    --glow-primary: 0 0 30px hsl(var(--primary) / 0.3);
+    --glow-secondary: 0 0 30px hsl(var(--secondary) / 0.3);
+    --glow-accent: 0 0 30px hsl(var(--accent) / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  a:hover {
-    color: #747bff;
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
-  button {
-    background-color: #f9f9f9;
+
+  body {
+    @apply bg-background text-foreground;
   }
 }
