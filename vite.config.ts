@@ -11,10 +11,10 @@ export default defineConfig(({ mode }) => ({
   plugins: [react(), mode === "development" && componentTagger()].filter(
     Boolean
   ),
-  base: '/taques-dev.github.io/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: "/taques-dev.github.io/",
 }))
