@@ -30,7 +30,7 @@ const projects: Project[] = [
       "Key project for eWorldes with focus on user experience and reliability",
     longDescription:
       "Led/Contributed to a core platform for eWorldes. Work spanned UI development, API integration, and quality improvements to support business goals.",
-    technologies: ["React", "Next.js", "Tailwind CSS", "Node.js"],
+    technologies: ["React", "Next.js", "Tailwind CSS", "Python"],
     githubUrl: "",
     liveUrl: "https://sunbucks.dhs.hawaii.gov",
     featured: true,
@@ -43,7 +43,7 @@ const projects: Project[] = [
       "Professional project delivered at Inetum (summary at a high level)",
     longDescription:
       "Enterprise-grade solution contributed while at Inetum. Responsibilities included full-stack development, performance tuning, and delivering features collaboratively across teams.",
-    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+    technologies: ["React", "TypeScript", "Python", "PostgreSQL"],
     githubUrl: "",
     liveUrl: "https://www.gov.pt",
     featured: true,
