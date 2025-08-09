@@ -77,4 +77,20 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Skip link */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 0.5rem 1rem;
+    z-index: 100;
+    border-radius: 0.25rem;
+    transition: top 0.2s;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
 }
